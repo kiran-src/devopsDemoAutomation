@@ -14,7 +14,7 @@ public class CompanyTest {
 	@Test
 	public void getData() throws InterruptedException {
 		System.out.println("Hello Guys");
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver.exe");
 		WebDriver driver =new ChromeDriver();
 		driver.get(Constants.USER_BASE_URL);
 		String text =driver.findElement(By.cssSelector("h2")).getText();
